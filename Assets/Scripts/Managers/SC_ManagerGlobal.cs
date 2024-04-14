@@ -11,6 +11,8 @@ public class SC_ManagerGlobal : MonoBehaviour
     [SerializeField]
     private string codeSecretRoom;
 
+    public GameObject jacuzzi;
+
     public List<string> ClickedObjectValue = new List<string>();
 
     [SerializeField]
@@ -99,11 +101,27 @@ public class SC_ManagerGlobal : MonoBehaviour
     //Hugo
     public void CheckJacuzzi()
     {
-
+        StartCoroutine(JacuzziFlip());
     }
     //Hugo
     public void CheckSecretRoom()
     {
 
+    }
+
+
+    IEnumerator JacuzziFlip()
+    {
+        Vector3 from = new Vector3(-90, 0, 0);
+        Vector3 to = new Vector3(90, 0, 0);
+        float counter = 0;
+        while (counter < 1)
+        {
+            counter += Time.deltaTime;
+            jacuzzi.transform.localEulerAngles = Vector3.Lerp(from, to, counter / 1);
+            yield return null;
+        }
+
+        yield return null;
     }
 }
