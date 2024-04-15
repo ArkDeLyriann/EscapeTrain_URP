@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SC_PickUp : MonoBehaviour
 {
+    //Hugo
+
     public GameObject player;
     public Transform holdPos;
     

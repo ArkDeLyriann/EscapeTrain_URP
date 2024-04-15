@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class C_Interactable : MonoBehaviour
 {
+    //Hugo
     // Start is called before the first frame update
     void Start()
     {

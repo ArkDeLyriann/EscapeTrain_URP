@@ -5,7 +5,7 @@ using UnityEngine;
 
 public class SC_WireConnection : MonoBehaviour
 {
-
+    //Yoann
     public string colorToCombine;
 
     public GameObject[] plug;

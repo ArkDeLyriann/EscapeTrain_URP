@@ -5,6 +5,7 @@ using TMPro;
 
 public class SC_ComputerButtons : MonoBehaviour
 {
+    //Hugo
     public TextMeshProUGUI deviationText;
 
     

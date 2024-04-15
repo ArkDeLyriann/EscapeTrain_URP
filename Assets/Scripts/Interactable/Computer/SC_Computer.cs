@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_Computer : C_Interactable
 {
+    //Hugo
     public GameObject crosshair;
     public GameObject ComputerScreen;
     public SC_PickUp pickUpScript;

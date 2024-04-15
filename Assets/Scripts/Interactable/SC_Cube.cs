@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SC_Cube : C_Interactable
 {
+    //Hugo
     public GameObject player;
     public Transform holdPos;
     public GameObject myself;
