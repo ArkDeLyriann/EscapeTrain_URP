@@ -4,12 +4,7 @@ using UnityEngine;
 
 public class SC_ManagerGlobal : MonoBehaviour
 {
-    [SerializeField]
-    private string codeOffice;
-    [SerializeField]
-    private string codeJacccuzi;
-    [SerializeField]
-    private string codeSecretRoom;
+    
 
     public GameObject jacuzzi;
 
@@ -135,8 +130,8 @@ public class SC_ManagerGlobal : MonoBehaviour
 
     IEnumerator JacuzziFlip()
     {
-        Vector3 from = new Vector3(-90, 0, 0);
-        Vector3 to = new Vector3(90, 0, 0);
+        Vector3 from = new Vector3(90, 0, 0);
+        Vector3 to = new Vector3(-90, 0, 0);
         float counter = 0;
         while (counter < 1)
         {

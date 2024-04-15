@@ -16,7 +16,7 @@ public class SC_AlarmButton : MonoBehaviour
     {
         Debug.Log("try validation");
     
-        alarmManager.CheckValidation(codeToCompare,puzzle);
+        alarmManager.CheckValidation(codeToCompare, puzzle);
     }
 }
 
