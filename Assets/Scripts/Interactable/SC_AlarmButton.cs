@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_AlarmButton : MonoBehaviour
 {
+    //Hugo
     public SC_ManagerGlobal alarmManager;
     public int puzzle;
     public List<string> codeToCompare;

@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class SC_Timer : MonoBehaviour
 {
+    //Hugo
     [SerializeField]
     private GameObject moon, earth;
 

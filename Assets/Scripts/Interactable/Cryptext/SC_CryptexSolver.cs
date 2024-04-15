@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_CryptexSolver : MonoBehaviour
 {
+    //Hugo
     private int neededToSolve = 7;
     public int solvedPieces;
     public SC_Cryptex cryptex;

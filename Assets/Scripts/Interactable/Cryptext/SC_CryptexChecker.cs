@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class SC_CryptexChecker : MonoBehaviour
 {
+    //Hugo
     [SerializeField]
     private SC_CryptexSolver solver;
 

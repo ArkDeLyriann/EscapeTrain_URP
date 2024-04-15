@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class SC_Socket : MonoBehaviour
 {
-
+    //Yoann
     public GameObject light;
     public Material lightMaterial1;
     public Material lightMaterial2;

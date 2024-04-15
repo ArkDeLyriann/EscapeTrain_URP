@@ -5,7 +5,7 @@ using UnityEngine.Rendering.Universal;
 
 public class SC_Fingerprints : C_Interactable
 {
-
+    //Hugo
     public DecalProjector projector;
     // Start is called before the first frame update
     private void OnTriggerEnter(Collider other)

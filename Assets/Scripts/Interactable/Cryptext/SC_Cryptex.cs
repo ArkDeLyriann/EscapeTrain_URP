@@ -5,6 +5,7 @@ using TMPro;
 
 public class SC_Cryptex : C_Interactable
 {
+    //Hugo
     public GameObject player;
     public Transform holdPos;
     public GameObject myself;

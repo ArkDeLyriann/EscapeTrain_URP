@@ -5,8 +5,9 @@ using UnityEngine;
 public class SC_ManagerGlobal : MonoBehaviour
 {
     
-
+    public GameObject chestDoor;
     public GameObject jacuzzi;
+    public AudioSource alarm;
 
     public List<string> ClickedObjectValue = new List<string>();
 
@@ -14,10 +15,9 @@ public class SC_ManagerGlobal : MonoBehaviour
     private List<string> AlarmCode = new List<string>();
 
     private string codeString;
-    public bool alarm = false;
     private int count;
 
-    public AudioSource alarmSound;
+
 
 
 
@@ -60,16 +60,15 @@ public class SC_ManagerGlobal : MonoBehaviour
     //Yoann
     public void StartAlarm()
     {
-        alarm = true;
+        alarm.Play();
     }
     //Yoann
     public void StopAlarm()
     {
-        alarm = false;
-        Debug.Log("l'alarme est éteinte");
+        alarm.Stop();
     }
 
-    //Yoann
+    //Yoann (retravaillé par Hugo)
     public void CheckValidation(List<string> codeToCompare, int puzzle)
     {
         for (int i = 0; i < ClickedObjectValue.Count; i++)
@@ -80,7 +79,11 @@ public class SC_ManagerGlobal : MonoBehaviour
                 Debug.Log("is good");
                 count++;
             }
-            else { return; }
+            else {
+                
+                StartAlarm();
+                return;
+            }
         }
         if (count == codeToCompare.Count)
         {
@@ -100,11 +103,14 @@ public class SC_ManagerGlobal : MonoBehaviour
             {
                 OpenSecretRoom();
             }
+            if(puzzle == 4)
+            {
+                OpenChest();
+            }
             else
             {
                 Debug.Log("puzzle inconnu");
                 return;
-
             }
         }
     }
@@ -121,7 +127,10 @@ public class SC_ManagerGlobal : MonoBehaviour
 
     }
 
-
+    public void OpenChest()
+    {
+        chestDoor.SetActive(false);
+    }
     public void OpenOffice() 
     {
         

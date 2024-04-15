@@ -6,6 +6,8 @@ using UnityEngine;
 
 public class SC_FPSController : MonoBehaviour
 {
+    //Hugo
+
     public float walkingSpeed = 7.5f;
     public float runningSpeed = 11.5f;
     public float jumpSpeed = 8.0f;

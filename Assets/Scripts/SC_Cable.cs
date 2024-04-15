@@ -6,7 +6,7 @@ using UnityEngine.UI;
 
 public class SC_Cable : C_Interactable
 {
-
+    //Yoann
 
     public bool isPicked;
     public SC_PickUp pickUpScript;
