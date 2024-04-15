@@ -8,6 +8,7 @@ public class SC_ManagerGlobal : MonoBehaviour
     public GameObject chestDoor;
     public GameObject jacuzzi;
     public AudioSource alarm;
+    public GameObject officeDoor;
 
     public List<string> ClickedObjectValue = new List<string>();
 
@@ -133,14 +134,14 @@ public class SC_ManagerGlobal : MonoBehaviour
     }
     public void OpenOffice() 
     {
-        
+        officeDoor.SetActive(false);
     }
 
 
     IEnumerator JacuzziFlip()
     {
-        Vector3 from = new Vector3(90, 0, 0);
-        Vector3 to = new Vector3(-90, 0, 0);
+        Vector3 from = new Vector3(-90, 0, 0);
+        Vector3 to = new Vector3(90, 0, 0);
         float counter = 0;
         while (counter < 5)
         {
