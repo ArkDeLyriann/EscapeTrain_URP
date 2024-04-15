@@ -142,10 +142,10 @@ public class SC_ManagerGlobal : MonoBehaviour
         Vector3 from = new Vector3(90, 0, 0);
         Vector3 to = new Vector3(-90, 0, 0);
         float counter = 0;
-        while (counter < 1)
+        while (counter < 5)
         {
             counter += Time.deltaTime;
-            jacuzzi.transform.localEulerAngles = Vector3.Lerp(from, to, counter / 1);
+            jacuzzi.transform.localEulerAngles = Vector3.Lerp(from, to, (counter / 5));
             yield return null;
         }
 
