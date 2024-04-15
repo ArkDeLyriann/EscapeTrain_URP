@@ -75,38 +75,61 @@ public class SC_ManagerGlobal : MonoBehaviour
     }
 
     //Yoann
-    public void CheckValidation()
+    public void CheckValidation(List<string> codeToCompare, int puzzle)
     {
         for (int i = 0; i < ClickedObjectValue.Count; i++)
         {
 
-            if (ClickedObjectValue[i] == AlarmCode[i])
+            if (ClickedObjectValue[i] == codeToCompare[i])
             {
                 Debug.Log("is good");
                 count++;
             }
             else { return; }
         }
-        if (count == 4)
+        if (count == codeToCompare.Count)
         {
-            StopAlarm();
+            if(puzzle == 0)
+            {
+                StopAlarm();
+            }
+            if(puzzle == 1)
+            {
+                OpenOffice();
+            }
+            if (puzzle == 2)
+            {
+                CheckJacuzzi();
+            }
+            if(puzzle == 3)
+            {
+                OpenSecretRoom();
+            }
+            else
+            {
+                Debug.Log("puzzle inconnu");
+                return;
+
+            }
         }
     }
 
-    //Hugo
-    public void CheckOffice()
-    {
-
-    }
+    
     //Hugo
     public void CheckJacuzzi()
     {
         StartCoroutine(JacuzziFlip());
     }
     //Hugo
-    public void CheckSecretRoom()
+    public void OpenSecretRoom()
     {
 
+    }
+
+
+    public void OpenOffice() 
+    {
+        
     }
 
 

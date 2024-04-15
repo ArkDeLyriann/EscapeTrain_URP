@@ -13,11 +13,7 @@ public class SC_Wire : C_Interactable
     public SC_FPSController fpsController;
     public float smoothSpeed;
     public string tagObjectCollider;
-    public float throwForce = 0.1f;
-
-
-    [SerializeField]
-    private float angleX, angleY, angleZ;
+    public float throwForce = 0.0f;
 
 
     private Rigidbody myselfRigidbody;
@@ -38,12 +34,8 @@ public class SC_Wire : C_Interactable
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-
                 DropObject();
                 FollowingCamera();
-
-
-
             }
 
         }
@@ -51,15 +43,9 @@ public class SC_Wire : C_Interactable
 
     public override void Interact()
     {
-        isPicked = true;
-        myselfRigidbody.isKinematic = true;
-        //myself.transform.Rotate(0, 0, 0, Space.World);
-        myself.transform.parent = holdPos.transform;
+        
 
-
-        myself.layer = LayerNumber;
-
-        Physics.IgnoreCollision(myself.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
+        //Physics.IgnoreCollision(myself.GetComponent<Collider>(), player.GetComponent<Collider>(), true);
     }
 
     void FollowingCamera()
@@ -73,24 +59,25 @@ public class SC_Wire : C_Interactable
         transform.position = objectPosition;
     }
 
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.CompareTag(tagObjectCollider))
-        {
-            if (myselfRigidbody != null)
-            {
-                myselfRigidbody.constraints = RigidbodyConstraints.FreezeAll;
-            }
-        }
-    }
 
+    
+    public void OnCollisionEnter(Collision collision)
+    {
+        Color();        
+    }
+    
     void DropObject()
     {
         isPicked = false;
-        Physics.IgnoreCollision(myself.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
+        //Physics.IgnoreCollision(myself.GetComponent<Collider>(), player.GetComponent<Collider>(), false);
         myself.layer = 0;
         myselfRigidbody.isKinematic = false;
         myself.transform.parent = null;
         pickUpScript.canInteract = true;
+    }
+
+    public string Color()
+    {
+        return tagObjectCollider;
     }
 }
