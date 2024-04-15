@@ -68,6 +68,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tirroir (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd1ee4268d66edc47ba60d6f329745ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -147,6 +152,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: SM_Tirroir
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: dd1ee4268d66edc47ba60d6f329745ed,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -218,6 +228,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -7511558181221131132, guid: 3ab77da246f409e40b36758189a0f8a3,
         type: 3}
+      propertyPath: m_StaticShadowCaster
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: 3ab77da246f409e40b36758189a0f8a3,
+        type: 3}
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 4b12cabdbd675da4788d08c1cc967254, type: 2}
@@ -225,6 +240,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Name
       value: Table_Television
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 3ab77da246f409e40b36758189a0f8a3,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
